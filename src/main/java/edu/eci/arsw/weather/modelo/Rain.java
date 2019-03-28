@@ -4,7 +4,7 @@ package edu.eci.arsw.weather.modelo;
  *
  * @author Carlos Medina
  */
-class Rain {
+public class Rain {
     
     private int tresh;
 

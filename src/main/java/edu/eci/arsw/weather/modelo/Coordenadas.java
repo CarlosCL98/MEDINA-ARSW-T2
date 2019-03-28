@@ -4,7 +4,7 @@ package edu.eci.arsw.weather.modelo;
  *
  * @author Carlos Medina
  */
-class Coordenadas {
+public class Coordenadas {
     
     private double lon;
     private double lat;

@@ -18,7 +18,7 @@ public class WeatherServicesImpl implements WeatherServices {
     private WeatherPersistence weatherPersistence;
 
     @Override
-    public String getCiudadByName(String nombre) {
+    public Ciudad getCiudadByName(String nombre) {
         return weatherPersistence.getCiudadByName(nombre);
     }
     

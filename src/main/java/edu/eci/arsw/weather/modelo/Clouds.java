@@ -4,7 +4,7 @@ package edu.eci.arsw.weather.modelo;
  *
  * @author Carlos Medina
  */
-class Clouds {
+public class Clouds {
     
     private int all;
 

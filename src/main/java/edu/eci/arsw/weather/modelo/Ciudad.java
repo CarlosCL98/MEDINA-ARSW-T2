@@ -1,5 +1,6 @@
 package edu.eci.arsw.weather.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,81 +9,33 @@ import java.util.List;
  */
 public class Ciudad {
     
-    private String name;
-    private int dt;
-    private int id;
-    private int cod;
-    private Main main;
-    private List<Weather> weathers;
     private Coordenadas coord;
     private Sys sys;
+    private List<Weather> weathers = new ArrayList<>();
+    private Main main;
     private Wind wind;
     private Rain rain;
     private Clouds clouds;
+    private int dt;
+    private int id;
+    private String name;
+    private int cod;
 
     public Ciudad() {
     }
 
-    public Ciudad(String name, int dt, int id, int cod, Main main, List<Weather> weathers, Coordenadas coord, Sys sys, Wind wind, Rain rain, Clouds clouds) {
-        this.name = name;
-        this.dt = dt;
-        this.id = id;
-        this.cod = cod;
-        this.main = main;
-        this.weathers = weathers;
+    public Ciudad(Coordenadas coord, Sys sys, List<Weather> weathers, Main main, Wind wind, Rain rain, Clouds clouds, int dt, int id, String name, int cod) {
         this.coord = coord;
         this.sys = sys;
+        this.weathers = weathers;
+        this.main = main;
         this.wind = wind;
         this.rain = rain;
         this.clouds = clouds;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getDt() {
-        return dt;
-    }
-
-    public void setDt(int dt) {
         this.dt = dt;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
         this.id = id;
-    }
-
-    public int getCod() {
-        return cod;
-    }
-
-    public void setCod(int cod) {
+        this.name = name;
         this.cod = cod;
-    }
-
-    public Main getMain() {
-        return main;
-    }
-
-    public void setMain(Main main) {
-        this.main = main;
-    }
-
-    public List<Weather> getWeathers() {
-        return weathers;
-    }
-
-    public void setWeathers(List<Weather> weathers) {
-        this.weathers = weathers;
     }
 
     public Coordenadas getCoord() {
@@ -99,6 +52,22 @@ public class Ciudad {
 
     public void setSys(Sys sys) {
         this.sys = sys;
+    }
+
+    public List<Weather> getWeathers() {
+        return weathers;
+    }
+
+    public void setWeathers(List<Weather> weathers) {
+        this.weathers = weathers;
+    }
+
+    public Main getMain() {
+        return main;
+    }
+
+    public void setMain(Main main) {
+        this.main = main;
     }
 
     public Wind getWind() {
@@ -123,6 +92,38 @@ public class Ciudad {
 
     public void setClouds(Clouds clouds) {
         this.clouds = clouds;
+    }
+
+    public int getDt() {
+        return dt;
+    }
+
+    public void setDt(int dt) {
+        this.dt = dt;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCod() {
+        return cod;
+    }
+
+    public void setCod(int cod) {
+        this.cod = cod;
     }
         
 }

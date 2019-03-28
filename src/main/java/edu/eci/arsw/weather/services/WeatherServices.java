@@ -8,6 +8,6 @@ import edu.eci.arsw.weather.modelo.Ciudad;
  */
 public interface WeatherServices {
     
-    public String getCiudadByName(String nombre);
+    public Ciudad getCiudadByName(String nombre);
     
 }

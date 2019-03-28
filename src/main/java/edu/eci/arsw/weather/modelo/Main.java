@@ -5,7 +5,7 @@ package edu.eci.arsw.weather.modelo;
  *
  * @author Carlos Medina
  */
-class Main {
+public class Main {
 
     private double temp;
     private int humidity;

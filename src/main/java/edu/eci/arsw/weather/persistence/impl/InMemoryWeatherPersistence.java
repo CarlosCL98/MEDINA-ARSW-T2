@@ -23,11 +23,11 @@ public class InMemoryWeatherPersistence implements WeatherPersistence {
     @Autowired
     private HttpConnection httpConnection;
     
-    private Map<String, String> ciudades = new HashMap<>();
+    private Map<String, Ciudad> ciudades = new HashMap<>();
 
     @Override
-    public String getCiudadByName(String nombre) {
-        String ciudad = "";
+    public Ciudad getCiudadByName(String nombre) {
+        Ciudad ciudad = new Ciudad();
         if (ciudades.containsKey(nombre)) {
             ciudad = ciudades.get(nombre);
         } else {

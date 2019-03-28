@@ -8,5 +8,5 @@ import edu.eci.arsw.weather.modelo.Ciudad;
  */
 public interface WeatherPersistence {
     
-    public String getCiudadByName(String nombre);
+    public Ciudad getCiudadByName(String nombre);
 }
