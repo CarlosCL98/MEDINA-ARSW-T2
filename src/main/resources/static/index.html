@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Weather layer</title>
+        <title>Weather City</title>
         <style>
             html, body{
                 width: 100%;
@@ -11,9 +11,8 @@
                 padding: 0;
             }
             #map-canvas {
-                width: 80%;
-                height: 80%;
-                text-align: center;
+                width: 100%;
+                height: 100%;
             }
             .gm-style-iw {
                 text-align: center;
@@ -23,6 +22,8 @@
         <script src="/webjars/jquery/jquery.min.js"></script>
         <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="app.css" />
+        <script src="appCiudad.js"></script>
         <script>
             var map;
             var geoJSON;
@@ -173,6 +174,7 @@
 
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
+        <script src="app.js" ></script>
     </head>
     <body class="bg">
         <div class="container">
@@ -188,15 +190,16 @@
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md">
-                    <input id="CiudadInput" type="text">
+                    <input id="CiudadInput" type="text" class="form-control">
                 </div>
                 <div class="col-md">
-                    <input type="button" onclick="" value="Buscar Ciudad">
+                    <input type="button" onclick="app.getCiudadByName()" value="Buscar Ciudad" class="form-control">
                 </div>                
                 <div class="col-md-4"></div>
-            </div>            
+            </div>
+            <br><br>
             <div class="row">
-                <table id="weatherTable" class="table table-light">
+                <table id="weatherTable" class="table table-light table-bordered">
                     <thead></thead>
                     <tbody></tbody>
                 </table>
